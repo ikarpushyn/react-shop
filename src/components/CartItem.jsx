@@ -1,5 +1,11 @@
+import { useContext } from 'react';
+import { ShopContext } from '../context/context';
+
 export const CartItem = (props) => {
-	const { id, name, price, quantity, removeFromCart, incQuantity, decQuantity } = props;
+	const { id, name, price, quantity } = props;
+
+	const { decQuantity, incQuantity, removeFromCart } = useContext(ShopContext);
+
 	return (
 		<div>
 			<li href="#!" className="collection-item">
@@ -19,5 +25,3 @@ export const CartItem = (props) => {
 		</div>
 	);
 };
-// incQuantity = { incQuantity };
-// decQuantity = { decQuantity };

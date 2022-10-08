@@ -109,6 +109,7 @@ label:not(:last-child) {
 #toast-container {
 	top: 3rem !important;
 	animation: fade-in 250ms ease-in-out;
+	max-height: 2rem;
 }
 
 @keyframes fade-in {
