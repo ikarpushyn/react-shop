@@ -15,7 +15,7 @@ export const Header = () => {
 					</li>
 					<li>
 						<a href="https://ikarpushyn.github.io/React_food/" target="_blank" rel="noreferrer">
-							React Food Project
+							React Food Project.
 						</a>
 					</li>
 				</ul>
