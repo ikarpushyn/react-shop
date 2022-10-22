@@ -9,7 +9,7 @@ export const Header = () => {
 					<li></li>
 					<li></li>
 					<li>
-						<a href="https://ikarpushyn.github.io/react-shop/" target="_blank" rel="noreferrer">
+						<a href="https://github.com/ikarpushyn/react-shop" target="_blank" rel="noreferrer">
 							Repo
 						</a>
 					</li>
