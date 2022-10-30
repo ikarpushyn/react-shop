@@ -105,7 +105,9 @@ label:not(:last-child) {
 		opacity: 1;
 	}
 }
-
+#number {
+	width: 50px;
+}
 #toast-container {
 	top: 3rem !important;
 	animation: fade-in 250ms ease-in-out;
@@ -121,4 +123,14 @@ label:not(:last-child) {
 		opacity: 1;
 		transform: translateY(0rem);
 	}
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	/* display: none; <- Crashes Chrome on hover */
+	-webkit-appearance: none;
+	margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type='number'] {
+	-moz-appearance: textfield; /* Firefox */
 }

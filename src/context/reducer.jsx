@@ -57,23 +57,38 @@ export function reducer(state, { type, payload }) {
 				...state,
 				order: state.order.map((el) => {
 					if (el.id === payload.id) {
-						const newQuantity = el.quantity + 1;
+						const newQuantity = Number.parseInt(el.quantity) + 1;
 						return {
 							...el,
-							quantity: newQuantity,
+							quantity: Number.parseInt(newQuantity),
 						};
 					} else {
 						return el;
 					}
 				}),
 			};
-
+		case 'CHANGE_VALUE':
+			return {
+				...state,
+				order: state.order.map((el) => {
+					if (el.id === payload.id) {
+						const newQuantity = Number.parseInt(payload.value);
+						console.log(newQuantity);
+						return {
+							...el,
+							quantity: Number.parseInt(newQuantity),
+						};
+					} else {
+						return el;
+					}
+				}),
+			};
 		case 'DEC_QUANTITY':
 			return {
 				...state,
 				order: state.order.map((el) => {
 					if (el.id === payload.id) {
-						const newQuantity = el.quantity - 1;
+						const newQuantity = Number.parseInt(el.quantity) - 1;
 						return {
 							...el,
 							quantity: newQuantity >= 0 ? newQuantity : 0,

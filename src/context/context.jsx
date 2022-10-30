@@ -38,6 +38,10 @@ export const ContextProvider = ({ children }) => {
 		dispatch({ type: 'INC_QUANTITY', payload: { id: itemId } });
 	};
 
+	value.changeValue = (e, itemId) => {
+		dispatch({ type: 'CHANGE_VALUE', payload: { value: e.target.value, id: itemId } });
+	};
+
 	value.decQuantity = (itemId) => {
 		dispatch({ type: 'DEC_QUANTITY', payload: { id: itemId } });
 	};
